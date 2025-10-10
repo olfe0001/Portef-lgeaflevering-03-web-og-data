@@ -1,0 +1,193 @@
+/*-----------NULSTILLER BROWSERENS STANDARD STYLING-----------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*-----------FONT OG STIL GENNEM HELE BODY-----------*/
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/*-----------HEADER----------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    border-bottom: 1px solid #eee; /* TIlføjer en tynd grå linje under header - fundet på Google */
+}
+
+/*-----------HEADER LOGO----------- */
+header img {
+    height: 60px;
+    width: auto;
+}
+
+/*-----------NAV TAGS HEADER----------- */
+nav ul {
+    display: flex; /* sætter li på række */
+    list-style: none; /* fjerner li prikker */
+    gap: 2rem; /* giver plads mellem li */
+}
+
+nav a {
+    text-decoration: none; /* fjerner understregning på a tags */
+    color: black; /* tekst farve */
+    font-weight: bold; /* fed skrift */
+}
+
+/*-----------FRONTPAGE-----------*/
+.frontpage {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6rem;
+    background: linear-gradient(135deg, #00b7f1, #0094d3); /* Fået ChatGPT til at ramme Ønskeskyens baggrundsfarve */
+    color: white;
+    padding: 3rem 8rem 6rem;
+    min-height: 95vh; /* ChatGPT har skrevet koden */
+    overflow: hidden; /* ChatGPT har skrevet koden */
+    position: relative; /* ChatGPT har skrevet koden */
+}
+
+.frontpage-text {
+    max-width: 600px;
+    padding-top: 3rem;
+}
+
+.intro { /* KOM IGANG MED ØNSKESKYEN */
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.frontpage-text h2 { /* Alle dine ønsker samlet ét sted */
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+
+.description { /* Beskrivelse af ønskeskyen */
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.frontpage-text button { /* OPRET EN PROFIL BUTTON*/
+    background-color: black;
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2rem 0;
+}
+
+.frontpage-image { /* Billede af telefoner */
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+}
+.frontpage-image img {
+    width: 1500px;
+    max-width: none;
+    transform: translate(100px, -20px) rotate(-5deg); /* ChatGPT har skrevet koden */
+    filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.4)); /* ChatGPT har skrevet koden */
+}
+
+/*-----------FOOTER-----------*/
+footer {
+    background: linear-gradient(135deg, #00b7f1, #0094d3); /* Fået ChatGPT til at ramme Ønskeskyens baggrundsfarve */
+    color: white;
+    padding: 3rem 6rem;
+    font-family: Arial, sans-serif;
+}
+
+/*-----------KOLONNER-----------*/
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* gør den responsiv */
+    gap: 3rem;
+}
+
+.footer-columns {
+    flex: 1;
+    min-width: 180px;
+}
+
+/*-----------LOGO-----------*/
+.footer-logo img {
+    height: 50px;
+    width: auto;
+}
+
+/*-----------ALLE H3 OVERSKRIFTER-----------*/
+footer h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+/*-----------ALLE LINKS-----------*/
+footer p, footer a {
+    color: lightblue;
+    text-decoration: none;
+    line-height: 2;
+    font-size: 1rem;
+}
+
+/*-----------HOVER på a tags (links)-----------*/
+footer a:hover {
+    color: white;
+}
+
+/*-----------DOWNLOAD APPEN-----------*/
+.footer-apps img {
+    height: 45px;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    display: block; /* sættes over hinanden */
+}
+
+/*-----------HOVER på a tags (links)-----------*/
+.footer-apps img:hover {
+    transform: scale(2);
+}
+
+
+/* ---------- MOBIL VISNING ---------- */
+@media (max-width: 768px) {
+    header,
+    .frontpage,
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .frontpage-text h2 {
+        font-size: 2rem;
+    }
+
+    .frontpage-text p {
+        font-size: 1rem;
+    }
+
+    .frontpage-image img {
+        width: 380px;
+        transform: rotate(-8deg);
+        margin-top: 2rem;
+    }
+
+    footer img {
+        height: 40px;
+    }
+}
